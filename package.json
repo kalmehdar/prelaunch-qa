@@ -1,0 +1,35 @@
+{
+  "name": "prelaunch-qa",
+  "version": "1.0.0",
+  "description": "Zero-dependency Node CLI that runs a 30-item pre-launch QA checklist against any deployed website.",
+  "bin": {
+    "prelaunch-qa": "./prelaunch-qa.js"
+  },
+  "main": "prelaunch-qa.js",
+  "scripts": {
+    "test": "node prelaunch-qa.js https://example.com"
+  },
+  "keywords": [
+    "qa",
+    "pre-launch",
+    "website",
+    "lint",
+    "seo",
+    "accessibility",
+    "deploy",
+    "cli"
+  ],
+  "author": "Khalid Mohamed",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalmehdar/prelaunch-qa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kalmehdar/prelaunch-qa/issues"
+  },
+  "homepage": "https://github.com/kalmehdar/prelaunch-qa#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}
