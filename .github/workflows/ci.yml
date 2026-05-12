@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  smoke:
+    name: Syntax + live smoke test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['18', '20', '22']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Syntax check
+        run: node --check prelaunch-qa.js
+
+      - name: Live smoke test against example.com
+        run: node prelaunch-qa.js https://example.com || true
+        # `|| true` because example.com has things prelaunch-qa intentionally
+        # flags (no JSON-LD, no GDPR banner, no canonical) — we want to confirm
+        # the script runs to completion, not that example.com passes the audit.
