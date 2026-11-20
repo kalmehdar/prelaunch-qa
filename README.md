@@ -106,8 +106,8 @@ MIT — see [LICENSE](LICENSE).
 
 ## Why does this exist
 
-I run a small web studio. Every launch used to take ~75 minutes of clicking
-around with DevTools open. Now it takes 8 seconds plus whatever the medium
-items need. The tool pays for itself the second time you use it.
+I run a small web studio. Every launch used to mean a long round of clicking
+around with DevTools open. Now the 30 checks run in about 8 seconds, and I
+only look at what they flag. The tool pays for itself the second time you use it.
 
 If you find a check that should be in the list, [open an issue](https://github.com/kalmehdar/prelaunch-qa/issues).
