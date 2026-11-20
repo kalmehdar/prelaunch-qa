@@ -96,7 +96,8 @@ node prelaunch-qa.js https://example.com --report=qa-report.md
 ```yaml
 - name: Pre-launch QA
   run: |
-    npx -y prelaunch-qa@latest https://your-site.com --json > qa.json || (cat qa.json; exit 1)
+    curl -sO https://raw.githubusercontent.com/kalmehdar/prelaunch-qa/main/prelaunch-qa.js
+    node prelaunch-qa.js https://your-site.com --json > qa.json || (cat qa.json; exit 1)
 ```
 
 ## License
